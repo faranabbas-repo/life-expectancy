@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "sources.html",
+    "href": "sources.html",
+    "title": "Sources",
+    "section": "",
+    "text": "The data for this project comes from the World Bank’s World Development Indicators (WDI), accessed through the WDI R package.\nIndicators used:\n\nSP.DYN.LE00.IN: Life expectancy at birth, total (years)\nNY.GDP.PCAP.CD: GDP per capita (current US dollars)\nSH.XPD.CHEX.GD.ZS: Current health expenditure (% of GDP)\n\nCoverage:\n\ncountry-level observations\nannual data from 2000 to 2023\nregion and income-group metadata supplied through WDI\n\nCleaning approach:\n\nrename raw WDI codes into readable variables\nremove observations with missing values where needed for each figure\ncompare countries by region and income group rather than treating all observations as identical\n\nThis setup is suitable for exploratory cross-country development analysis and can be extended later into panel regressions or more focused case studies."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "I am Faran Abbas, a graduate student in World Economy at Shandong University. You can view my work on GitHub or contact me at faranabbas@hotmail.com.\nThis project studies how life expectancy relates to income and health spending across countries using World Bank data. It is designed as a development-economics portfolio project that connects economic resources, public spending, and human well-being in a reproducible Quarto workflow.\nThe repository is available here."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Life Expectancy, Income, and Health Spending Across Countries",
+    "section": "",
+    "text": "This project explores how life expectancy differs across countries and how those differences relate to economic development and health spending.\nUsing the World Bank’s World Development Indicators, the analysis compares countries in the most recent year available and tracks average life expectancy across income groups over time. The goal is not to claim a causal result, but to build a clear, reproducible cross-country view of development and health outcomes."
+  },
+  {
+    "objectID": "index.html#summary",
+    "href": "index.html#summary",
+    "title": "Life Expectancy, Income, and Health Spending Across Countries",
+    "section": "",
+    "text": "This project explores how life expectancy differs across countries and how those differences relate to economic development and health spending.\nUsing the World Bank’s World Development Indicators, the analysis compares countries in the most recent year available and tracks average life expectancy across income groups over time. The goal is not to claim a causal result, but to build a clear, reproducible cross-country view of development and health outcomes."
+  },
+  {
+    "objectID": "index.html#cross-country-comparison",
+    "href": "index.html#cross-country-comparison",
+    "title": "Life Expectancy, Income, and Health Spending Across Countries",
+    "section": "Cross-Country Comparison",
+    "text": "Cross-Country Comparison\n\n\n\n\n\nLife Expectancy and GDP per Capita Across Countries (2023)"
+  },
+  {
+    "objectID": "index.html#income-group-trends",
+    "href": "index.html#income-group-trends",
+    "title": "Life Expectancy, Income, and Health Spending Across Countries",
+    "section": "Income Group Trends",
+    "text": "Income Group Trends\n\n\n\n\n\nAverage Life Expectancy by Income Group (2000-2023)"
+  },
+  {
+    "objectID": "index.html#snapshot-table",
+    "href": "index.html#snapshot-table",
+    "title": "Life Expectancy, Income, and Health Spending Across Countries",
+    "section": "Snapshot Table",
+    "text": "Snapshot Table\n\n\n\nSelected 2023 Country Snapshot\n\n\n\n\n\n\n\n\n\n\nCountry\nRegion\nIncome Group\nLife Expectancy\nGDP per Capita (US$)\nHealth Spending (% GDP)\n\n\n\n\nMonaco\nEurope & Central Asia\nHigh income\n86.4\n256800\n3.1\n\n\nSan Marino\nEurope & Central Asia\nHigh income\n85.7\n59880\n6.6\n\n\nLiechtenstein\nEurope & Central Asia\nHigh income\n84.6\n206781\n5.7\n\n\nSwitzerland\nEurope & Central Asia\nHigh income\n84.2\n100624\n11.7\n\n\nJapan\nEast Asia & Pacific\nHigh income\n84.0\n33836\n10.7\n\n\nAndorra\nEurope & Central Asia\nHigh income\n84.0\n46812\n7.7\n\n\nSpain\nEurope & Central Asia\nHigh income\n83.9\n33493\n9.2\n\n\nKorea, Rep.\nEast Asia & Pacific\nHigh income\n83.4\n35674\n8.6\n\n\nMalta\nMiddle East & North Africa\nHigh income\n83.4\n40906\n8.8\n\n\nItaly\nEurope & Central Asia\nHigh income\n83.4\n39277\n8.4\n\n\nLuxembourg\nEurope & Central Asia\nHigh income\n83.3\n133231\n5.8\n\n\nSweden\nEurope & Central Asia\nHigh income\n83.3\n54950\n11.2"
+  },
+  {
+    "objectID": "index.html#interpretation",
+    "href": "index.html#interpretation",
+    "title": "Life Expectancy, Income, and Health Spending Across Countries",
+    "section": "Interpretation",
+    "text": "Interpretation\nThis project is meant to support careful comparison rather than overclaiming. Countries with similar income levels can still have very different health outcomes, which leaves room for deeper analysis of institutions, public policy, inequality, and health-system performance."
+  }
+]

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Life Expectancy, Income, and Health Spending Across Countries – Life Expectancy and Development</title>
+<title>Sources – Life Expectancy and Development</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -93,11 +93,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./sources.html"> 
+    <a class="nav-link active" href="./sources.html" aria-current="page"> 
 <span class="menu-text">Sources</span></a>
   </li>  
   <li class="nav-item">
@@ -115,26 +115,15 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a></li>
-  <li><a href="#cross-country-comparison" id="toc-cross-country-comparison" class="nav-link" data-scroll-target="#cross-country-comparison">Cross-Country Comparison</a></li>
-  <li><a href="#income-group-trends" id="toc-income-group-trends" class="nav-link" data-scroll-target="#income-group-trends">Income Group Trends</a></li>
-  <li><a href="#snapshot-table" id="toc-snapshot-table" class="nav-link" data-scroll-target="#snapshot-table">Snapshot Table</a></li>
-  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation">Interpretation</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Life Expectancy, Income, and Health Spending Across Countries</h1>
-<p class="subtitle lead">An exploratory development-economics project using World Bank data</p>
+<h1 class="title">Sources</h1>
 </div>
 
 
@@ -151,169 +140,28 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="summary" class="level2">
-<h2 class="anchored" data-anchor-id="summary">Summary</h2>
-<p>This project explores how life expectancy differs across countries and how those differences relate to economic development and health spending.</p>
-<p>Using the World Bank’s World Development Indicators, the analysis compares countries in the most recent year available and tracks average life expectancy across income groups over time. The goal is not to claim a causal result, but to build a clear, reproducible cross-country view of development and health outcomes.</p>
-</section>
-<section id="cross-country-comparison" class="level2">
-<h2 class="anchored" data-anchor-id="cross-country-comparison">Cross-Country Comparison</h2>
-<div class="cell">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption>Life Expectancy and GDP per Capita Across Countries (2023)</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="income-group-trends" class="level2">
-<h2 class="anchored" data-anchor-id="income-group-trends">Income Group Trends</h2>
-<div class="cell">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption>Average Life Expectancy by Income Group (2000-2023)</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="snapshot-table" class="level2">
-<h2 class="anchored" data-anchor-id="snapshot-table">Snapshot Table</h2>
-<div class="cell" data-tbl-cap="Selected 2023 Country Snapshot">
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<caption>Selected 2023 Country Snapshot</caption>
-<colgroup>
-<col style="width: 12%">
-<col style="width: 23%">
-<col style="width: 11%">
-<col style="width: 13%">
-<col style="width: 18%">
-<col style="width: 20%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Country</th>
-<th style="text-align: left;">Region</th>
-<th style="text-align: left;">Income Group</th>
-<th style="text-align: right;">Life Expectancy</th>
-<th style="text-align: right;">GDP per Capita (US$)</th>
-<th style="text-align: right;">Health Spending (% GDP)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Monaco</td>
-<td style="text-align: left;">Europe &amp; Central Asia</td>
-<td style="text-align: left;">High income</td>
-<td style="text-align: right;">86.4</td>
-<td style="text-align: right;">256800</td>
-<td style="text-align: right;">3.1</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">San Marino</td>
-<td style="text-align: left;">Europe &amp; Central Asia</td>
-<td style="text-align: left;">High income</td>
-<td style="text-align: right;">85.7</td>
-<td style="text-align: right;">59880</td>
-<td style="text-align: right;">6.6</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Liechtenstein</td>
-<td style="text-align: left;">Europe &amp; Central Asia</td>
-<td style="text-align: left;">High income</td>
-<td style="text-align: right;">84.6</td>
-<td style="text-align: right;">206781</td>
-<td style="text-align: right;">5.7</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Switzerland</td>
-<td style="text-align: left;">Europe &amp; Central Asia</td>
-<td style="text-align: left;">High income</td>
-<td style="text-align: right;">84.2</td>
-<td style="text-align: right;">100624</td>
-<td style="text-align: right;">11.7</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Japan</td>
-<td style="text-align: left;">East Asia &amp; Pacific</td>
-<td style="text-align: left;">High income</td>
-<td style="text-align: right;">84.0</td>
-<td style="text-align: right;">33836</td>
-<td style="text-align: right;">10.7</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Andorra</td>
-<td style="text-align: left;">Europe &amp; Central Asia</td>
-<td style="text-align: left;">High income</td>
-<td style="text-align: right;">84.0</td>
-<td style="text-align: right;">46812</td>
-<td style="text-align: right;">7.7</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Spain</td>
-<td style="text-align: left;">Europe &amp; Central Asia</td>
-<td style="text-align: left;">High income</td>
-<td style="text-align: right;">83.9</td>
-<td style="text-align: right;">33493</td>
-<td style="text-align: right;">9.2</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Korea, Rep.</td>
-<td style="text-align: left;">East Asia &amp; Pacific</td>
-<td style="text-align: left;">High income</td>
-<td style="text-align: right;">83.4</td>
-<td style="text-align: right;">35674</td>
-<td style="text-align: right;">8.6</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Malta</td>
-<td style="text-align: left;">Middle East &amp; North Africa</td>
-<td style="text-align: left;">High income</td>
-<td style="text-align: right;">83.4</td>
-<td style="text-align: right;">40906</td>
-<td style="text-align: right;">8.8</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Italy</td>
-<td style="text-align: left;">Europe &amp; Central Asia</td>
-<td style="text-align: left;">High income</td>
-<td style="text-align: right;">83.4</td>
-<td style="text-align: right;">39277</td>
-<td style="text-align: right;">8.4</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Luxembourg</td>
-<td style="text-align: left;">Europe &amp; Central Asia</td>
-<td style="text-align: left;">High income</td>
-<td style="text-align: right;">83.3</td>
-<td style="text-align: right;">133231</td>
-<td style="text-align: right;">5.8</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Sweden</td>
-<td style="text-align: left;">Europe &amp; Central Asia</td>
-<td style="text-align: left;">High income</td>
-<td style="text-align: right;">83.3</td>
-<td style="text-align: right;">54950</td>
-<td style="text-align: right;">11.2</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</section>
-<section id="interpretation" class="level2">
-<h2 class="anchored" data-anchor-id="interpretation">Interpretation</h2>
-<p>This project is meant to support careful comparison rather than overclaiming. Countries with similar income levels can still have very different health outcomes, which leaves room for deeper analysis of institutions, public policy, inequality, and health-system performance.</p>
+<p>The data for this project comes from the World Bank’s World Development Indicators (WDI), accessed through the <code>WDI</code> R package.</p>
+<p>Indicators used:</p>
+<ul>
+<li><code>SP.DYN.LE00.IN</code>: Life expectancy at birth, total (years)</li>
+<li><code>NY.GDP.PCAP.CD</code>: GDP per capita (current US dollars)</li>
+<li><code>SH.XPD.CHEX.GD.ZS</code>: Current health expenditure (% of GDP)</li>
+</ul>
+<p>Coverage:</p>
+<ul>
+<li>country-level observations</li>
+<li>annual data from 2000 to 2023</li>
+<li>region and income-group metadata supplied through WDI</li>
+</ul>
+<p>Cleaning approach:</p>
+<ul>
+<li>rename raw WDI codes into readable variables</li>
+<li>remove observations with missing values where needed for each figure</li>
+<li>compare countries by region and income group rather than treating all observations as identical</li>
+</ul>
+<p>This setup is suitable for exploratory cross-country development analysis and can be extended later into panel regressions or more focused case studies.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
