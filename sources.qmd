@@ -1,0 +1,26 @@
+---
+title: "Sources"
+format: html
+---
+
+The data for this project comes from the World Bank's World Development Indicators (WDI), accessed through the `WDI` R package.
+
+Indicators used:
+
+- `SP.DYN.LE00.IN`: Life expectancy at birth, total (years)
+- `NY.GDP.PCAP.CD`: GDP per capita (current US dollars)
+- `SH.XPD.CHEX.GD.ZS`: Current health expenditure (% of GDP)
+
+Coverage:
+
+- country-level observations
+- annual data from 2000 to 2023
+- region and income-group metadata supplied through WDI
+
+Cleaning approach:
+
+- rename raw WDI codes into readable variables
+- remove observations with missing values where needed for each figure
+- compare countries by region and income group rather than treating all observations as identical
+
+This setup is suitable for exploratory cross-country development analysis and can be extended later into panel regressions or more focused case studies.

@@ -1,0 +1,121 @@
+---
+title: "Life Expectancy, Income, and Health Spending Across Countries"
+subtitle: "An exploratory development-economics project using World Bank data"
+format: html
+---
+
+```{r}
+#| message: false
+library(WDI)
+library(tidyverse)
+library(ggplot2)
+library(scales)
+library(knitr)
+
+indicators <- c(
+  "SP.DYN.LE00.IN",       # Life expectancy at birth
+  "NY.GDP.PCAP.CD",       # GDP per capita
+  "SH.XPD.CHEX.GD.ZS"     # Health expenditure (% GDP)
+)
+
+wdi_data <- WDI(
+  indicator = indicators,
+  start = 2000,
+  end = 2023,
+  extra = TRUE
+)
+
+analysis_data <- wdi_data |>
+  rename(
+    life_expectancy = SP.DYN.LE00.IN,
+    gdp_per_capita = NY.GDP.PCAP.CD,
+    health_spending = SH.XPD.CHEX.GD.ZS
+  ) |>
+  filter(!is.na(region), !is.na(income))
+
+latest_data <- analysis_data |>
+  filter(
+    year == 2023,
+    !is.na(life_expectancy),
+    !is.na(gdp_per_capita),
+    !is.na(health_spending)
+  )
+```
+
+## Summary
+
+This project explores how life expectancy differs across countries and how those differences relate to economic development and health spending.
+
+Using the World Bank's World Development Indicators, the analysis compares countries in the most recent year available and tracks average life expectancy across income groups over time. The goal is not to claim a causal result, but to build a clear, reproducible cross-country view of development and health outcomes.
+
+## Cross-Country Comparison
+
+```{r}
+#| fig-cap: "Life Expectancy and GDP per Capita Across Countries (2023)"
+
+ggplot(latest_data, aes(x = gdp_per_capita, y = life_expectancy)) +
+  geom_point(aes(color = region, size = health_spending), alpha = 0.7) +
+  geom_smooth(method = "lm", se = FALSE, color = "black", linewidth = 0.7) +
+  scale_x_log10(labels = label_dollar()) +
+  scale_size_continuous(name = "Health Spending (% GDP)", range = c(2, 9)) +
+  labs(
+    title = "Life Expectancy Rises with Income, but Countries Still Differ Widely",
+    subtitle = "Bubble size represents health expenditure as a share of GDP",
+    x = "GDP per Capita (log scale)",
+    y = "Life Expectancy at Birth (years)",
+    color = "Region"
+  ) +
+  theme_minimal()
+```
+
+## Income Group Trends
+
+```{r}
+#| fig-cap: "Average Life Expectancy by Income Group (2000-2023)"
+
+income_trends <- analysis_data |>
+  filter(!is.na(life_expectancy), !is.na(income)) |>
+  group_by(year, income) |>
+  summarise(avg_life_expectancy = mean(life_expectancy, na.rm = TRUE), .groups = "drop")
+
+ggplot(income_trends, aes(x = year, y = avg_life_expectancy, color = income)) +
+  geom_line(linewidth = 1) +
+  labs(
+    title = "Life Expectancy Trends by Income Group",
+    x = "Year",
+    y = "Average Life Expectancy (years)",
+    color = "Income Group"
+  ) +
+  theme_minimal()
+```
+
+## Snapshot Table
+
+```{r}
+#| tbl-cap: "Selected 2023 Country Snapshot"
+
+latest_data |>
+  select(country, region, income, life_expectancy, gdp_per_capita, health_spending) |>
+  arrange(desc(life_expectancy)) |>
+  slice_head(n = 12) |>
+  mutate(
+    life_expectancy = round(life_expectancy, 1),
+    gdp_per_capita = round(gdp_per_capita, 0),
+    health_spending = round(health_spending, 1)
+  ) |>
+  knitr::kable(
+    col.names = c(
+      "Country",
+      "Region",
+      "Income Group",
+      "Life Expectancy",
+      "GDP per Capita (US$)",
+      "Health Spending (% GDP)"
+    ),
+    format = "markdown"
+  )
+```
+
+## Interpretation
+
+This project is meant to support careful comparison rather than overclaiming. Countries with similar income levels can still have very different health outcomes, which leaves room for deeper analysis of institutions, public policy, inequality, and health-system performance.

@@ -1,0 +1,10 @@
+---
+title: "About"
+format: html
+---
+
+I am Faran Abbas, a graduate student in World Economy at Shandong University. You can view my work on [GitHub](https://github.com/faranabbas-repo) or contact me at [faranabbas@hotmail.com](mailto:faranabbas@hotmail.com).
+
+This project studies how life expectancy relates to income and health spending across countries using World Bank data. It is designed as a development-economics portfolio project that connects economic resources, public spending, and human well-being in a reproducible Quarto workflow.
+
+The repository is available [here](https://github.com/faranabbas-repo/life-expectancy).
